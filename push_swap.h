@@ -5,13 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 17:47:28 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/23 22:22:37 by nlafarge         ###   ########.fr       */
+/*   Created: 2021/08/23 23:44:44 by nlafarge          #+#    #+#             */
+/*   Updated: 2021/08/23 23:46:42 by nlafarge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
 # include <stdio.h>
 # include <stdlib.h>
@@ -21,30 +21,32 @@
 
 typedef struct s_ps
 {
-    int nb_nums;
-} t_ps;
+	int	nb_nums;
+	int	*tab_a;
+}	t_ps;
 
 /*
 ** MAIN
 */
-int main(int argc, char **argv);
+int			main(int argc, char **argv);
 
 /*
 ** UTILS
 */
-void	ft_error(int clean_success, char *msg);
-int	        ft_clean(t_ps *ps);
+void		ft_error(int clean_success, char *msg);
+int			ft_clean(t_ps *ps);
 
 /*
 ** LIB
 */
-long long		ft_atoi(const char *str);
-int             ft_strlen(char *str);
+long long	ft_atoi(const char *str);
+int			ft_strlen(char *str);
 
 /*
 ** CHECKERS
 */
-int     ft_check_arg(char *arg);
-int     ft_check_num(long long num);
+int			ft_check_arg(char *arg);
+int			ft_check_num(long long num);
+int			ft_check_duplicate(t_ps *ps, int num);
 
 #endif

@@ -6,13 +6,14 @@
 /*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 19:10:39 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/23 19:11:12 by nlafarge         ###   ########.fr       */
+/*   Updated: 2021/08/23 23:49:12 by nlafarge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void ft_struct_init(t_ps *ps)
+void	ft_struct_init(t_ps *ps)
 {
-    ps->nb_nums = 0;
+	ps->nb_nums = 0;
+	ps->tab_a = NULL;
 }

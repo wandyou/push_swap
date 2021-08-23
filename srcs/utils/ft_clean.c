@@ -6,7 +6,7 @@
 /*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 18:59:02 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/23 19:03:31 by nlafarge         ###   ########.fr       */
+/*   Updated: 2021/08/23 23:49:00 by nlafarge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int	ft_clean(t_ps *ps)
 {
-    (void)ps;
+	if (ps->tab_a)
+		free(ps->tab_a);
 	return (1);
 }

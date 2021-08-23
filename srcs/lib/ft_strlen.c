@@ -6,15 +6,15 @@
 /*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 21:26:21 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/23 21:26:47 by nlafarge         ###   ########.fr       */
+/*   Updated: 2021/08/23 23:48:51 by nlafarge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
