@@ -6,7 +6,7 @@
 /*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 23:44:44 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/23 23:46:42 by nlafarge         ###   ########.fr       */
+/*   Updated: 2021/08/24 00:40:11 by nlafarge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,9 @@ int			main(int argc, char **argv);
 */
 void		ft_error(int clean_success, char *msg);
 int			ft_clean(t_ps *ps);
+int			ft_is_ordered(int *tab);
+void		ft_print_stack(int *stack, int len);
+void		ft_struct_init(t_ps *ps);
 
 /*
 ** LIB
@@ -47,6 +50,6 @@ int			ft_strlen(char *str);
 */
 int			ft_check_arg(char *arg);
 int			ft_check_num(long long num);
-int			ft_check_duplicate(t_ps *ps, int num);
+int			ft_check_duplicate(int *stack, int len, int num);
 
 #endif

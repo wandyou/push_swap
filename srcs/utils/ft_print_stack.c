@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_struct_init.c                                   :+:      :+:    :+:   */
+/*   ft_print_stack.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 19:10:39 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/24 00:45:21 by nlafarge         ###   ########.fr       */
+/*   Created: 2021/08/23 23:56:57 by nlafarge          #+#    #+#             */
+/*   Updated: 2021/08/24 00:45:28 by nlafarge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void	ft_struct_init(t_ps *ps)
+void	ft_print_stack(int *stack, int len)
 {
-	ps->nb_nums = 0;
-	ps->tab_a = NULL;
+	int	i;
+
+	i = 0;
+	while (i < len)
+	{
+		printf("%d\n", stack[i]);
+		i++;
+	}
 }

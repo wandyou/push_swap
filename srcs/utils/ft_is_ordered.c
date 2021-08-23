@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_struct_init.c                                   :+:      :+:    :+:   */
+/*   ft_is_ordered.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 19:10:39 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/24 00:45:21 by nlafarge         ###   ########.fr       */
+/*   Created: 2021/08/23 23:50:45 by nlafarge          #+#    #+#             */
+/*   Updated: 2021/08/24 00:45:13 by nlafarge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void	ft_struct_init(t_ps *ps)
+int	ft_is_ordered(int *tab)
 {
-	ps->nb_nums = 0;
-	ps->tab_a = NULL;
+	int	i;
+
+	i = 0;
+	while (tab[i])
+	{
+		if (tab[i] >= tab[i + 1])
+			return (0);
+		i++;
+	}
+	return (1);
 }

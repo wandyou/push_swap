@@ -6,20 +6,20 @@
 /*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 23:38:31 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/23 23:47:43 by nlafarge         ###   ########.fr       */
+/*   Updated: 2021/08/24 00:45:06 by nlafarge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-int	ft_check_duplicate(t_ps *ps, int num)
+int	ft_check_duplicate(int *stack, int len, int num)
 {
 	int	i;
 
 	i = 0;
-	while (i < ps->nb_nums)
+	while (i < len)
 	{
-		if (num == ps->tab_a[i])
+		if (stack[i] == num)
 			return (0);
 		i++;
 	}
