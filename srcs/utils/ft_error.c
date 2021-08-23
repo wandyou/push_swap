@@ -1,44 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 17:47:28 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/23 19:20:27 by nlafarge         ###   ########.fr       */
+/*   Created: 2021/08/23 18:57:28 by nlafarge          #+#    #+#             */
+/*   Updated: 2021/08/23 18:57:55 by nlafarge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#include "../../push_swap.h"
 
-# include <stdio.h>
-# include <stdlib.h>
-
-# define INT_MIN -2147483648
-# define INT_MAX 2147483647
-
-typedef struct s_ps
+void	ft_error(int clean_success, char *msg)
 {
-    int nb_nums;
-} t_ps;
-
-/*
-** MAIN
-*/
-int main(int argc, char **argv);
-
-/*
-** UTILS
-*/
-void	ft_error(int clean_success, char *msg);
-int	    ft_clean(t_ps *ps);
-int     ft_check_num(int num);
-
-/*
-** LIB
-*/
-int		ft_atoi(const char *str);
-
-#endif
+	printf("\033[0;31mError\n");
+	if (!clean_success)
+		printf("An error occured during cleaning process ...");
+	else
+		printf("%s", msg);
+	printf("\n\033[0m");
+	exit(EXIT_FAILURE);
+}
