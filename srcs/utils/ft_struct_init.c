@@ -6,7 +6,7 @@
 /*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 19:10:39 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/24 01:03:45 by nlafarge         ###   ########.fr       */
+/*   Updated: 2021/08/24 01:06:14 by nlafarge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,5 @@ void	ft_struct_init(t_ps *ps)
 {
 	ps->nb_nums = 0;
 	ps->tab_a.nums = NULL;
+	ps->tab_b.nums = NULL;
 }

@@ -6,7 +6,7 @@
 /*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 23:44:44 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/24 01:03:34 by nlafarge         ###   ########.fr       */
+/*   Updated: 2021/08/24 01:10:32 by nlafarge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,16 @@
 # define INT_MIN -2147483648
 # define INT_MAX 2147483647
 
-typedef	struct s_stack
+typedef struct s_stack
 {
-	int *nums;
+	int	*nums;
 }	t_stack;
 
 typedef struct s_ps
 {
 	int		nb_nums;
 	t_stack	tab_a;
+	t_stack	tab_b;
 }	t_ps;
 
 /*
@@ -44,6 +45,7 @@ int			ft_is_sorted(int *tab, int len);
 void		ft_print_stack(int *stack, int len);
 void		ft_struct_init(t_ps *ps);
 void		ft_exit(int clean_success);
+void		ft_init_stack(t_ps *ps, int *tab);
 
 /*
 ** LIB

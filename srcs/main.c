@@ -6,7 +6,7 @@
 /*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 23:44:55 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/24 01:04:03 by nlafarge         ###   ########.fr       */
+/*   Updated: 2021/08/24 01:10:21 by nlafarge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ int	main(int argc, char **argv)
 	if (argc < 2)
 		ft_error(ft_clean(&ps), "Missing arguments ...");
 	ps.nb_nums = argc - 1;
-	ps.tab_a.nums = (int *)malloc(ps.nb_nums * sizeof(int));
-	if (!ps.tab_a.nums)
-		ft_error(ft_clean(&ps), "Malloc of stack a failed ...");
+	ft_init_stack(&ps, ps.tab_a.nums);
 	while (i < argc)
 	{
 		if (!ft_check_arg(argv[i]))
@@ -36,5 +34,6 @@ int	main(int argc, char **argv)
 	}
 	if (ft_is_sorted(ps.tab_a.nums, ps.nb_nums))
 		ft_exit(ft_clean(&ps));
+	ft_init_stack(&ps, ps.tab_b.nums);
 	ft_print_stack(ps.tab_a.nums, ps.nb_nums);
 }

@@ -6,7 +6,7 @@
 #    By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/23 18:55:57 by nlafarge          #+#    #+#              #
-#    Updated: 2021/08/24 00:55:40 by nlafarge         ###   ########.fr        #
+#    Updated: 2021/08/24 01:10:53 by nlafarge         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,8 @@ UTILS = srcs/utils/ft_error.c \
 		srcs/utils/ft_struct_init.c \
 		srcs/utils/ft_is_sorted.c \
 		srcs/utils/ft_print_stack.c \
-		srcs/utils/ft_exit.c
+		srcs/utils/ft_exit.c \
+		srcs/utils/ft_init_stack.c
 
 SRCS = srcs/main.c \
 	${UTILS} \
