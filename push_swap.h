@@ -6,7 +6,7 @@
 /*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 17:47:28 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/23 19:20:27 by nlafarge         ###   ########.fr       */
+/*   Updated: 2021/08/23 22:22:37 by nlafarge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,18 @@ int main(int argc, char **argv);
 ** UTILS
 */
 void	ft_error(int clean_success, char *msg);
-int	    ft_clean(t_ps *ps);
-int     ft_check_num(int num);
+int	        ft_clean(t_ps *ps);
 
 /*
 ** LIB
 */
-int		ft_atoi(const char *str);
+long long		ft_atoi(const char *str);
+int             ft_strlen(char *str);
+
+/*
+** CHECKERS
+*/
+int     ft_check_arg(char *arg);
+int     ft_check_num(long long num);
 
 #endif

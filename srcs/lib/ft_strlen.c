@@ -1,39 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 19:18:50 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/23 20:38:54 by nlafarge         ###   ########.fr       */
+/*   Created: 2021/08/23 21:26:21 by nlafarge          #+#    #+#             */
+/*   Updated: 2021/08/23 21:26:47 by nlafarge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-long long ft_atoi(const char *str)
+int ft_strlen(char *str)
 {
-	long long neg;
 	int i;
-	long long num;
 
 	i = 0;
-	neg = 1;
-	num = 0;
-	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t' || str[i] == '\v'
-			|| str[i] == '\f' || str[i] == '\r')
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	while (str[i] != '\0')
 	{
-		if (str[i] == '-')
-			neg *= -1;
 		i++;
 	}
-	while (str[i] >= 48 && str[i] <= 57)
-	{
-		num = num * 10 + (str[i] - 48);
-		i++;
-	}
-	return (num * neg);
+	return (i);
 }

@@ -1,39 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_check_arg.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 19:18:50 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/23 20:38:54 by nlafarge         ###   ########.fr       */
+/*   Created: 2021/08/23 21:12:28 by nlafarge          #+#    #+#             */
+/*   Updated: 2021/08/23 22:25:02 by nlafarge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-long long ft_atoi(const char *str)
+int ft_check_arg(char *arg)
 {
-	long long neg;
 	int i;
-	long long num;
 
 	i = 0;
-	neg = 1;
-	num = 0;
-	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t' || str[i] == '\v'
-			|| str[i] == '\f' || str[i] == '\r')
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	while (arg[i] != '\0')
 	{
-		if (str[i] == '-')
-			neg *= -1;
+		if ((arg[i] < '0' || arg[i] > '9') && arg[i] != '-')
+			return (0);
+		if (arg[i] == '-' && i > 0)
+			return (0);
 		i++;
 	}
-	while (str[i] >= 48 && str[i] <= 57)
-	{
-		num = num * 10 + (str[i] - 48);
-		i++;
-	}
-	return (num * neg);
+	if (i == 0)
+		return (0);
+
+	if (!ft_check_num(ft_atoi(arg)))
+		return (0);
+	return (1);
 }
