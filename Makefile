@@ -6,7 +6,7 @@
 #    By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/23 18:55:57 by nlafarge          #+#    #+#              #
-#    Updated: 2021/08/23 23:59:01 by nlafarge         ###   ########.fr        #
+#    Updated: 2021/08/24 00:55:40 by nlafarge         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,8 +25,9 @@ CHECKERS = srcs/checkers/ft_check_arg.c \
 UTILS = srcs/utils/ft_error.c \
 		srcs/utils/ft_clean.c \
 		srcs/utils/ft_struct_init.c \
-		srcs/utils/ft_is_ordered.c \
-		srcs/utils/ft_print_stack.c
+		srcs/utils/ft_is_sorted.c \
+		srcs/utils/ft_print_stack.c \
+		srcs/utils/ft_exit.c
 
 SRCS = srcs/main.c \
 	${UTILS} \
