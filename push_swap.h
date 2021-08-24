@@ -6,7 +6,7 @@
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 23:44:44 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/24 23:36:48 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/08/25 00:46:27 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void		ft_print_stack(int *stack, int len);
 void		ft_struct_init(t_ps *ps);
 void		ft_exit(int clean_success);
 void		ft_stack_a_malloc(t_ps *ps);
-void		ft_stack_tmp_a_malloc(t_ps *ps);
+void		ft_stack_tmp_b_malloc(t_ps *ps);
 
 /*
 ** LIB
