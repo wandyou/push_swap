@@ -31,6 +31,7 @@ void	ft_pb(t_ps *ps)
 		ps->tmp_b[i + 1] = ps->tab_b.nums[i];
 		i++;
 	}
+	free(ps->tab_b.nums);
 	ps->tab_b.nums = ps->tmp_b;
 	ps->tab_b.size++;
 	printf("pb\n");

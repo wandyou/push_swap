@@ -18,9 +18,5 @@ int	ft_clean(t_ps *ps)
 		free(ps->tab_a.nums);
 	if (ps->tab_b.nums)
 		free(ps->tab_b.nums);
-	if (ps->tmp_a)
-		free(ps->tmp_a);
-	if (ps->tmp_b)
-		free(ps->tmp_b);
 	return (1);
 }

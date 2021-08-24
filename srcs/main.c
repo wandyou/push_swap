@@ -43,4 +43,5 @@ int	main(int argc, char **argv)
 	ft_pb(&ps);
 	ft_print_stack(ps.tab_a.nums, ps.tab_a.size);
 	ft_print_stack(ps.tab_b.nums, ps.tab_b.size);
+	ft_clean(&ps);
 }
