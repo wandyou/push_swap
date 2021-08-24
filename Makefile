@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+         #
+#    By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/23 18:55:57 by nlafarge          #+#    #+#              #
-#    Updated: 2021/08/24 01:10:53 by nlafarge         ###   ########.fr        #
+#    Updated: 2021/08/25 00:09:40 by nathanlafar      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 CC = clang
 RM = rm -rf
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g3
 
 LIB = srcs/lib/ft_atoi.c \
 	srcs/lib/ft_strlen.c
@@ -28,12 +28,18 @@ UTILS = srcs/utils/ft_error.c \
 		srcs/utils/ft_is_sorted.c \
 		srcs/utils/ft_print_stack.c \
 		srcs/utils/ft_exit.c \
-		srcs/utils/ft_init_stack.c
+		srcs/utils/ft_stack_a_malloc.c
+
+OPERATIONS = srcs/operations/ft_sa.c \
+			srcs/operations/ft_ra.c \
+			srcs/operations/ft_rra.c \
+			srcs/operations/ft_pb.c
 
 SRCS = srcs/main.c \
 	${UTILS} \
 	${LIB} \
-	${CHECKERS}
+	${CHECKERS} \
+	${OPERATIONS}
 
 OBJS = ${SRCS:.c=.o}
 

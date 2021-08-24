@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_init_stack.c                                    :+:      :+:    :+:   */
+/*   ft_stack_a_malloc.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 01:09:03 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/24 01:19:10 by nlafarge         ###   ########.fr       */
+/*   Updated: 2021/08/24 23:30:15 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void	ft_init_stack(t_ps *ps, int *tab)
+void	ft_stack_a_malloc(t_ps *ps)
 {
-	tab = (int *)malloc(ps->nb_nums * sizeof(int));
+	ps->tab_a.nums = (int *)malloc(ps->tab_a.size * sizeof(int));
 	if (!ps->tab_a.nums)
 		ft_error(ft_clean(ps), "Malloc of stack failed ...");
 }

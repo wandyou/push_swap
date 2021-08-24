@@ -1,25 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_stack.c                                   :+:      :+:    :+:   */
+/*   ft_pb.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 23:56:57 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/25 00:05:29 by nathanlafar      ###   ########.fr       */
+/*   Created: 2021/08/24 23:20:12 by nathanlafar       #+#    #+#             */
+/*   Updated: 2021/08/25 00:33:18 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void	ft_print_stack(int *stack, int len)
+void	ft_stack_tmp_a_malloc(t_ps *ps)
+{
+	ps->tmp_b = (int *)malloc((ps->tab_b.size + 1) * sizeof(int));
+	if (!ps->tmp_b)
+		ft_error(ft_clean(ps), "Malloc of stack failed ...");
+}
+
+void	ft_pb(t_ps *ps)
 {
 	int	i;
 
 	i = 0;
-	while (i < len)
+	ft_stack_tmp_a_malloc(ps);
+	ps->tmp_b[0] = ps->tab_a.nums[0];
+	while (i < ps->tab_b.size)
 	{
-		printf("%d\n", stack[i]);
+		ps->tmp_b[i + 1] = ps->tab_b.nums[i];
 		i++;
 	}
+	ps->tab_b.nums = ps->tmp_b;
+	ps->tab_b.size++;
+	printf("pb\n");
 }

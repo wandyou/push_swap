@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_stack.c                                   :+:      :+:    :+:   */
+/*   ft_rra.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 23:56:57 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/25 00:05:29 by nathanlafar      ###   ########.fr       */
+/*   Created: 2021/08/24 22:59:43 by nathanlafar       #+#    #+#             */
+/*   Updated: 2021/08/24 23:17:32 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void	ft_print_stack(int *stack, int len)
+void	ft_rra(t_ps *ps)
 {
+	int	tmp;
 	int	i;
 
-	i = 0;
-	while (i < len)
+	if (ps->tab_a.size > 2)
 	{
-		printf("%d\n", stack[i]);
-		i++;
+		i = ps->tab_a.size;
+		tmp = ps->tab_a.nums[ps->tab_a.size - 1];
+		while (i > 0)
+		{
+			ps->tab_a.nums[i] = ps->tab_a.nums[i - 1];
+			i--;
+		}
+		ps->tab_a.nums[0] = tmp;
 	}
+	printf("rra\n");
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_clean.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 18:59:02 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/24 01:06:32 by nlafarge         ###   ########.fr       */
+/*   Updated: 2021/08/24 23:32:27 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,9 @@ int	ft_clean(t_ps *ps)
 		free(ps->tab_a.nums);
 	if (ps->tab_b.nums)
 		free(ps->tab_b.nums);
+	if (ps->tmp_a)
+		free(ps->tmp_a);
+	if (ps->tmp_b)
+		free(ps->tmp_b);
 	return (1);
 }

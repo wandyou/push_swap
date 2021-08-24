@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 23:44:44 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/24 01:10:32 by nlafarge         ###   ########.fr       */
+/*   Updated: 2021/08/24 23:36:48 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,14 @@
 typedef struct s_stack
 {
 	int	*nums;
+	int	size;
 }	t_stack;
 
 typedef struct s_ps
 {
 	int		nb_nums;
+	int		*tmp_a;
+	int		*tmp_b;
 	t_stack	tab_a;
 	t_stack	tab_b;
 }	t_ps;
@@ -45,7 +48,8 @@ int			ft_is_sorted(int *tab, int len);
 void		ft_print_stack(int *stack, int len);
 void		ft_struct_init(t_ps *ps);
 void		ft_exit(int clean_success);
-void		ft_init_stack(t_ps *ps, int *tab);
+void		ft_stack_a_malloc(t_ps *ps);
+void		ft_stack_tmp_a_malloc(t_ps *ps);
 
 /*
 ** LIB
@@ -59,5 +63,13 @@ int			ft_strlen(char *str);
 int			ft_check_arg(char *arg);
 int			ft_check_num(long long num);
 int			ft_check_duplicate(int *stack, int len, int num);
+
+/*
+** OPERATIONS
+*/
+void		ft_sa(t_ps *ps);
+void		ft_ra(t_ps *ps);
+void		ft_rra(t_ps *ps);
+void		ft_pb(t_ps *ps);
 
 #endif
