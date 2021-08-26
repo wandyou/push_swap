@@ -6,7 +6,7 @@
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 23:44:55 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/25 00:33:23 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/08/27 01:00:04 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,5 @@ int	main(int argc, char **argv)
 	}
 	if (ft_is_sorted(ps.tab_a.nums, ps.nb_nums))
 		ft_exit(ft_clean(&ps));
-	ft_print_stack(ps.tab_a.nums, ps.tab_a.size);
-	ft_print_stack(ps.tab_b.nums, ps.tab_b.size);
-	ft_pb(&ps);
-	ft_print_stack(ps.tab_a.nums, ps.tab_a.size);
-	ft_print_stack(ps.tab_b.nums, ps.tab_b.size);
-	ft_pb(&ps);
-	ft_print_stack(ps.tab_a.nums, ps.tab_a.size);
-	ft_print_stack(ps.tab_b.nums, ps.tab_b.size);
 	ft_clean(&ps);
 }

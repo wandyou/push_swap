@@ -6,7 +6,7 @@
 #    By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/23 18:55:57 by nlafarge          #+#    #+#              #
-#    Updated: 2021/08/25 00:09:40 by nathanlafar      ###   ########.fr        #
+#    Updated: 2021/08/27 00:57:19 by nathanlafar      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,12 +28,18 @@ UTILS = srcs/utils/ft_error.c \
 		srcs/utils/ft_is_sorted.c \
 		srcs/utils/ft_print_stack.c \
 		srcs/utils/ft_exit.c \
-		srcs/utils/ft_stack_a_malloc.c
+		srcs/utils/ft_stack_a_malloc.c \
+		srcs/utils/ft_stack_tmp_a_malloc.c \
+		srcs/utils/ft_stack_tmp_b_malloc.c
 
 OPERATIONS = srcs/operations/ft_sa.c \
 			srcs/operations/ft_ra.c \
 			srcs/operations/ft_rra.c \
-			srcs/operations/ft_pb.c
+			srcs/operations/ft_pb.c \
+			srcs/operations/ft_sb.c \
+			srcs/operations/ft_rb.c \
+			srcs/operations/ft_rrb.c \
+			srcs/operations/ft_pa.c
 
 SRCS = srcs/main.c \
 	${UTILS} \

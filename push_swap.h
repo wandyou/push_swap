@@ -6,7 +6,7 @@
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 23:44:44 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/25 00:46:27 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/08/27 00:56:18 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,8 @@ void		ft_print_stack(int *stack, int len);
 void		ft_struct_init(t_ps *ps);
 void		ft_exit(int clean_success);
 void		ft_stack_a_malloc(t_ps *ps);
-void		ft_stack_tmp_b_malloc(t_ps *ps);
+void		ft_stack_tmp_a_malloc(t_ps *ps, int resize);
+void		ft_stack_tmp_b_malloc(t_ps *ps, int resize);
 
 /*
 ** LIB
@@ -71,5 +72,9 @@ void		ft_sa(t_ps *ps);
 void		ft_ra(t_ps *ps);
 void		ft_rra(t_ps *ps);
 void		ft_pb(t_ps *ps);
+void		ft_sb(t_ps *ps);
+void		ft_rb(t_ps *ps);
+void		ft_rrb(t_ps *ps);
+void		ft_pa(t_ps *ps);
 
 #endif
