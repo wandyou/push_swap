@@ -6,7 +6,7 @@
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 23:44:55 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/27 01:00:04 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/08/27 01:21:33 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	main(int argc, char **argv)
 	ft_struct_init(&ps);
 	if (argc < 2)
 		ft_error(ft_clean(&ps), "Missing arguments ...");
+	if (argc == 2)
+		ft_success(ft_clean(&ps), "Only one number, everthing's good !");
 	ps.nb_nums = argc - 1;
 	ps.tab_a.size = ps.nb_nums;
 	ft_stack_a_malloc(&ps);
@@ -33,7 +35,12 @@ int	main(int argc, char **argv)
 		ps.tab_a.nums[i - 1] = ft_atoi(argv[i]);
 		i++;
 	}
-	if (ft_is_sorted(ps.tab_a.nums, ps.nb_nums))
-		ft_exit(ft_clean(&ps));
-	ft_clean(&ps);
+	while (!ft_is_sorted(ps.tab_a.nums, ps.nb_nums))
+	{
+		if (ps.nb_nums == 2)
+			ft_sa(&ps);
+		if (ps.nb_nums == 3)
+			ft_sort_three(&ps);
+	}
+	ft_success(ft_clean(&ps), "The two numbers are now sorted");
 }

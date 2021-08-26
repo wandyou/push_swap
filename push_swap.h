@@ -6,7 +6,7 @@
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 23:44:44 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/27 00:56:18 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/08/27 01:19:40 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ int			main(int argc, char **argv);
 ** UTILS
 */
 void		ft_error(int clean_success, char *msg);
+void		ft_success(int clean_success, char *msg);
 int			ft_clean(t_ps *ps);
 int			ft_is_sorted(int *tab, int len);
 void		ft_print_stack(int *stack, int len);
@@ -76,5 +77,10 @@ void		ft_sb(t_ps *ps);
 void		ft_rb(t_ps *ps);
 void		ft_rrb(t_ps *ps);
 void		ft_pa(t_ps *ps);
+
+/*
+** SORTERS
+*/
+void		ft_sort_three(t_ps *ps);
 
 #endif

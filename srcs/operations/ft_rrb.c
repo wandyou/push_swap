@@ -6,7 +6,7 @@
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 00:46:46 by nathanlafar       #+#    #+#             */
-/*   Updated: 2021/08/27 01:00:27 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/08/27 01:15:07 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_rrb(t_ps *ps)
 	int	tmp;
 	int	i;
 
-	if (ps->tab_b.size > 2)
+	if (ps->tab_b.size >= 2)
 	{
 		i = ps->tab_b.size;
 		tmp = ps->tab_b.nums[ps->tab_b.size - 1];

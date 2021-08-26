@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rra.c                                           :+:      :+:    :+:   */
+/*   ft_success.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/24 22:59:43 by nathanlafar       #+#    #+#             */
-/*   Updated: 2021/08/27 01:39:13 by nathanlafar      ###   ########.fr       */
+/*   Created: 2021/08/27 01:03:31 by nathanlafar       #+#    #+#             */
+/*   Updated: 2021/08/27 01:39:21 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void	ft_rra(t_ps *ps)
+void	ft_success(int clean_success, char *msg)
 {
-	int	tmp;
-	int	i;
-
-	if (ps->tab_a.size >= 2)
-	{
-		i = ps->tab_a.size;
-		tmp = ps->tab_a.nums[ps->tab_a.size - 1];
-		while (i > 0)
-		{
-			ps->tab_a.nums[i] = ps->tab_a.nums[i - 1];
-			i--;
-		}
-		ps->tab_a.nums[0] = tmp;
-	}
-	printf("rra\n");
+	printf("\033[0;32mSuccess\n");
+	if (!clean_success)
+		printf("An error occured during cleaning process ...");
+	else
+		printf("%s", msg);
+	printf("\n\033[0m");
+	exit(EXIT_SUCCESS);
 }

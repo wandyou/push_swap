@@ -6,7 +6,7 @@
 #    By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/23 18:55:57 by nlafarge          #+#    #+#              #
-#    Updated: 2021/08/27 00:57:19 by nathanlafar      ###   ########.fr        #
+#    Updated: 2021/08/27 01:20:01 by nathanlafar      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ CHECKERS = srcs/checkers/ft_check_arg.c \
 			srcs/checkers/ft_check_duplicate.c
 
 UTILS = srcs/utils/ft_error.c \
+		srcs/utils/ft_success.c \
 		srcs/utils/ft_clean.c \
 		srcs/utils/ft_struct_init.c \
 		srcs/utils/ft_is_sorted.c \
@@ -41,11 +42,14 @@ OPERATIONS = srcs/operations/ft_sa.c \
 			srcs/operations/ft_rrb.c \
 			srcs/operations/ft_pa.c
 
+SORTERS = srcs/sorters/ft_sort_three.c
+
 SRCS = srcs/main.c \
 	${UTILS} \
 	${LIB} \
 	${CHECKERS} \
-	${OPERATIONS}
+	${OPERATIONS} \
+	${SORTERS}
 
 OBJS = ${SRCS:.c=.o}
 
