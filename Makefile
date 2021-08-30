@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+         #
+#    By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/23 18:55:57 by nlafarge          #+#    #+#              #
-#    Updated: 2021/08/27 01:20:01 by nathanlafar      ###   ########.fr        #
+#    Updated: 2021/08/31 00:58:48 by nlafarge         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,9 @@ UTILS = srcs/utils/ft_error.c \
 		srcs/utils/ft_exit.c \
 		srcs/utils/ft_stack_a_malloc.c \
 		srcs/utils/ft_stack_tmp_a_malloc.c \
-		srcs/utils/ft_stack_tmp_b_malloc.c
+		srcs/utils/ft_stack_tmp_b_malloc.c \
+		srcs/utils/ft_find_min_pos.c \
+		srcs/utils/ft_isolate_min.c
 
 OPERATIONS = srcs/operations/ft_sa.c \
 			srcs/operations/ft_ra.c \
@@ -42,7 +44,8 @@ OPERATIONS = srcs/operations/ft_sa.c \
 			srcs/operations/ft_rrb.c \
 			srcs/operations/ft_pa.c
 
-SORTERS = srcs/sorters/ft_sort_three.c
+SORTERS = srcs/sorters/ft_sort_three.c \
+			srcs/sorters/ft_sort_five.c
 
 SRCS = srcs/main.c \
 	${UTILS} \

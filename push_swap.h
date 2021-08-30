@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
+/*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 23:44:44 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/27 01:19:40 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/08/31 00:58:37 by nlafarge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ void		ft_exit(int clean_success);
 void		ft_stack_a_malloc(t_ps *ps);
 void		ft_stack_tmp_a_malloc(t_ps *ps, int resize);
 void		ft_stack_tmp_b_malloc(t_ps *ps, int resize);
+int			ft_find_min_pos(int *tab, int len);
+void		ft_isloate_min(t_ps *ps);
 
 /*
 ** LIB
@@ -82,5 +84,6 @@ void		ft_pa(t_ps *ps);
 ** SORTERS
 */
 void		ft_sort_three(t_ps *ps);
+void		ft_sort_five(t_ps *ps);
 
 #endif

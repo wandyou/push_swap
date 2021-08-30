@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
+/*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 23:44:55 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/27 01:21:33 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/08/31 01:29:14 by nlafarge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,9 @@ int	main(int argc, char **argv)
 	{
 		if (ps.nb_nums == 2)
 			ft_sa(&ps);
-		if (ps.nb_nums == 3)
+		else if (ps.nb_nums == 3)
 			ft_sort_three(&ps);
+		else if (ps.nb_nums <= 5)
+			ft_sort_five(&ps);
 	}
-	ft_success(ft_clean(&ps), "The two numbers are now sorted");
 }
