@@ -6,7 +6,7 @@
 /*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 23:44:55 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/31 01:29:14 by nlafarge         ###   ########.fr       */
+/*   Updated: 2021/08/31 01:54:38 by nlafarge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,16 @@ int	main(int argc, char **argv)
 		ps.tab_a.nums[i - 1] = ft_atoi(argv[i]);
 		i++;
 	}
-	while (!ft_is_sorted(ps.tab_a.nums, ps.nb_nums))
-	{
+	// while (!ft_is_sorted(ps.tab_a.nums, ps.nb_nums))
+	// {
 		if (ps.nb_nums == 2)
 			ft_sa(&ps);
 		else if (ps.nb_nums == 3)
 			ft_sort_three(&ps);
 		else if (ps.nb_nums <= 5)
 			ft_sort_five(&ps);
-	}
+		// else if (ps.nb_nums <= 100)
+		// 	ft_sort_hundred(&ps);
+		ft_clean(&ps);
+	// }
 }
