@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+         #
+#    By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/23 18:55:57 by nlafarge          #+#    #+#              #
-#    Updated: 2021/08/31 00:58:48 by nlafarge         ###   ########.fr        #
+#    Updated: 2021/08/31 04:03:37 by nathanlafar      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 CC = clang
 RM = rm -rf
-CFLAGS = -Wall -Wextra -Werror -g3
+CFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=address
 
 LIB = srcs/lib/ft_atoi.c \
 	srcs/lib/ft_strlen.c
@@ -33,7 +33,8 @@ UTILS = srcs/utils/ft_error.c \
 		srcs/utils/ft_stack_tmp_a_malloc.c \
 		srcs/utils/ft_stack_tmp_b_malloc.c \
 		srcs/utils/ft_find_min_pos.c \
-		srcs/utils/ft_isolate_min.c
+		srcs/utils/ft_isolate_min.c \
+		srcs/utils/ft_find_range.c
 
 OPERATIONS = srcs/operations/ft_sa.c \
 			srcs/operations/ft_ra.c \
@@ -45,7 +46,8 @@ OPERATIONS = srcs/operations/ft_sa.c \
 			srcs/operations/ft_pa.c
 
 SORTERS = srcs/sorters/ft_sort_three.c \
-			srcs/sorters/ft_sort_five.c
+			srcs/sorters/ft_sort_five.c \
+			srcs/sorters/ft_sort_hundred.c
 
 SRCS = srcs/main.c \
 	${UTILS} \

@@ -6,7 +6,7 @@
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 00:47:55 by nathanlafar       #+#    #+#             */
-/*   Updated: 2021/08/27 01:00:34 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/08/31 04:05:49 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_pa(t_ps *ps)
 	ps->tab_a.nums = ps->tmp_a;
 	ps->tab_a.size++;
 	i = 0;
-	while (i < ps->tab_b.size)
+	while (i < ps->tab_b.size - 1)
 	{
 		ps->tmp_b[i] = ps->tab_b.nums[i + 1];
 		i++;

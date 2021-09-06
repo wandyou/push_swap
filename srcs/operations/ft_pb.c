@@ -6,7 +6,7 @@
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 23:20:12 by nathanlafar       #+#    #+#             */
-/*   Updated: 2021/08/27 00:58:13 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/08/31 04:08:31 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_pb(t_ps *ps)
 {
 	int	i;
 
+	if (ps->tab_a.size <= 0)
+		return ;
 	i = 0;
 	ft_stack_tmp_b_malloc(ps, 1);
 	ft_stack_tmp_a_malloc(ps, -1);
@@ -29,7 +31,7 @@ void	ft_pb(t_ps *ps)
 	ps->tab_b.nums = ps->tmp_b;
 	ps->tab_b.size++;
 	i = 0;
-	while (i < ps->tab_a.size)
+	while (i < ps->tab_a.size - 1)
 	{
 		ps->tmp_a[i] = ps->tab_a.nums[i + 1];
 		i++;
