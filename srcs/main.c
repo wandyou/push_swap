@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
+/*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 23:44:55 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/31 04:09:16 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/09/06 19:26:40 by nlafarge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ int	main(int argc, char **argv)
 			ft_sa(&ps);
 		else if (ps.nb_nums == 3)
 			ft_sort_three(&ps);
-		else
+		else if (ps.nb_nums <= 5)
 			ft_sort_five(&ps);
-		// else if (ps.nb_nums <= 100)
-		// 	ft_sort_hundred(&ps, 5);
+		else if (ps.nb_nums <= 100)
+			ft_sort_hundred(&ps, 5);
 		ft_clean(&ps);
 	// }
 }

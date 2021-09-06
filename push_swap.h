@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
+/*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 23:44:44 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/31 04:08:35 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/09/06 19:22:12 by nlafarge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef struct s_ps
 	int		*tmp_b;
 	t_stack	tab_a;
 	t_stack	tab_b;
+	int		*sorted;
 }	t_ps;
 
 /*
@@ -55,6 +56,8 @@ void		ft_stack_tmp_b_malloc(t_ps *ps, int resize);
 int			ft_find_min_pos(int *tab, int len);
 void		ft_isloate_min(t_ps *ps);
 int			ft_find_range(int *tab, int size);
+void		ft_create_sorted_list(t_ps *ps);
+void 		ft_copy_list(int *src, int *dst, int len);
 
 /*
 ** LIB
