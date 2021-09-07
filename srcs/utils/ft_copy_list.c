@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_copy_list.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 19:17:36 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/09/06 19:18:39 by nlafarge         ###   ########.fr       */
+/*   Updated: 2021/09/07 02:19:56 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void ft_copy_list(int *src, int *dst, int len)
+void	ft_copy_list(int *src, int *dst, int len)
 {
 	int	i;
 

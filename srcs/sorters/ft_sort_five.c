@@ -6,7 +6,7 @@
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 21:59:18 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/08/31 03:21:17 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/09/07 02:20:56 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ void	ft_sort_five(t_ps *ps)
 		ft_isloate_min(ps);
 		len--;
 	}
-	// if (ps->nb_nums == 5)
-	// 	ft_isloate_min(ps);
 	ft_sort_three(ps);
 	len = ps->tab_b.size;
 	while (len > 0)
@@ -31,6 +29,4 @@ void	ft_sort_five(t_ps *ps)
 		ft_pa(ps);
 		len--;
 	}
-	// ft_pa(ps);
-	// ft_pa(ps);
 }

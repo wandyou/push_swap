@@ -6,7 +6,7 @@
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 03:10:45 by nathanlafar       #+#    #+#             */
-/*   Updated: 2021/08/31 03:14:50 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/09/07 02:19:33 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	ft_find_range(int *tab, int size)
 {
-	int min;
-	int max;
-	int i;
-	
+	int	min;
+	int	max;
+	int	i;
+
 	i = 0;
 	min = INT_MAX;
 	max = INT_MIN;

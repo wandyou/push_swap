@@ -6,11 +6,17 @@
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 23:20:12 by nathanlafar       #+#    #+#             */
-/*   Updated: 2021/08/31 04:08:31 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/09/07 02:22:37 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
+
+void	ft_stacks_tmp_malloc(t_ps *ps)
+{
+	ft_stack_tmp_b_malloc(ps, 1);
+	ft_stack_tmp_a_malloc(ps, -1);
+}
 
 void	ft_pb(t_ps *ps)
 {
@@ -19,8 +25,7 @@ void	ft_pb(t_ps *ps)
 	if (ps->tab_a.size <= 0)
 		return ;
 	i = 0;
-	ft_stack_tmp_b_malloc(ps, 1);
-	ft_stack_tmp_a_malloc(ps, -1);
+	ft_stacks_tmp_malloc(ps);
 	ps->tmp_b[0] = ps->tab_a.nums[0];
 	while (i < ps->tab_b.size)
 	{
