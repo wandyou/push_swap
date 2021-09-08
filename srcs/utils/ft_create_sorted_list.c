@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_create_sorted_list.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
+/*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 19:04:53 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/09/07 02:19:05 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/09/08 15:11:19 by nlafarge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

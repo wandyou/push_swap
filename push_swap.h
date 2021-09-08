@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
+/*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 23:44:44 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/09/07 02:22:55 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/09/08 15:30:39 by nlafarge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,23 @@ typedef struct s_stack
 	int	size;
 }	t_stack;
 
+typedef struct s_chunck
+{
+	int	i;
+	int	min;
+	int	max;
+	int size;
+}	t_chunck;
+
 typedef struct s_ps
 {
-	int		nb_nums;
-	int		*tmp_a;
-	int		*tmp_b;
-	t_stack	tab_a;
-	t_stack	tab_b;
-	int		*sorted;
+	int			nb_nums;
+	int			*tmp_a;
+	int			*tmp_b;
+	t_stack		tab_a;
+	t_stack		tab_b;
+	int			*sorted;
+	t_chunck	chunck;
 }	t_ps;
 
 /*
