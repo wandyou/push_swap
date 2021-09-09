@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 23:44:44 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/09/08 23:54:04 by nlafarge         ###   ########.fr       */
+/*   Updated: 2021/09/09 04:55:58 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,13 @@
 
 # define INT_MIN -2147483648
 # define INT_MAX 2147483647
+
+typedef	struct s_num_hold
+{
+	int	pos;
+	int	val;
+	int	moves;
+}	t_num_hold;
 
 typedef struct s_stack
 {
@@ -42,6 +49,8 @@ typedef struct s_ps
 	t_stack		tab_b;
 	int			*sorted;
 	t_chunck	chunck;
+	t_num_hold	top;
+	t_num_hold	bottom;
 }	t_ps;
 
 /*
@@ -87,11 +96,15 @@ int			ft_check_duplicate(int *stack, int len, int num);
 */
 void		ft_sa(t_ps *ps);
 void		ft_ra(t_ps *ps);
+void		ft_ra_times(t_ps *ps, int times);
 void		ft_rra(t_ps *ps);
+void		ft_rra_times(t_ps *ps, int times);
 void		ft_pb(t_ps *ps);
 void		ft_sb(t_ps *ps);
 void		ft_rb(t_ps *ps);
+void		ft_rb_times(t_ps *ps, int times);
 void		ft_rrb(t_ps *ps);
+void		ft_rrb_times(t_ps *ps, int times);
 void		ft_pa(t_ps *ps);
 
 /*

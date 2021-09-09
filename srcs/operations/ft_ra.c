@@ -6,11 +6,23 @@
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 22:46:36 by nathanlafar       #+#    #+#             */
-/*   Updated: 2021/08/27 01:42:55 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/09/09 04:09:38 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
+
+void	ft_ra_times(t_ps *ps, int times)
+{
+	int	i;
+
+	i = 0;
+	while (i < times)
+	{
+		ft_ra(ps);
+		i++;
+	}
+}
 
 void	ft_ra(t_ps *ps)
 {
