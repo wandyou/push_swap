@@ -6,7 +6,7 @@
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 23:44:44 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/09/09 04:55:58 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/09/09 23:54:09 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ void		ft_isloate_min(t_ps *ps);
 int			ft_find_range(int *tab, int size);
 void		ft_create_sorted_list(t_ps *ps);
 void		ft_copy_list(int *src, int *dst, int len);
+void		display_stacks(t_ps *ps);
 
 /*
 ** LIB

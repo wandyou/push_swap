@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nlafarge <nlafarge@student.42.fr>          +#+  +:+       +#+         #
+#    By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/23 18:55:57 by nlafarge          #+#    #+#              #
-#    Updated: 2021/09/06 19:22:23 by nlafarge         ###   ########.fr        #
+#    Updated: 2021/09/09 23:54:33 by nathanlafar      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,8 @@ UTILS = srcs/utils/ft_error.c \
 		srcs/utils/ft_isolate_min.c \
 		srcs/utils/ft_find_range.c \
 		srcs/utils/ft_create_sorted_list.c \
-		srcs/utils/ft_copy_list.c
+		srcs/utils/ft_copy_list.c \
+		srcs/utils/ft_display_stacks.c
 
 OPERATIONS = srcs/operations/ft_sa.c \
 			srcs/operations/ft_ra.c \

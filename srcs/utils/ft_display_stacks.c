@@ -1,45 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rra.c                                           :+:      :+:    :+:   */
+/*   ft_display_stacks.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/24 22:59:43 by nathanlafar       #+#    #+#             */
-/*   Updated: 2021/09/09 23:59:22 by nathanlafar      ###   ########.fr       */
+/*   Created: 2021/09/09 23:53:45 by nathanlafar       #+#    #+#             */
+/*   Updated: 2021/09/10 01:23:25 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void	ft_rra_times(t_ps *ps, int times)
+void	display_stacks(t_ps *ps)
 {
-	int	i;
-
-	i = 0;
-	while (i < times)
-	{
-		ft_rra(ps);
-		i++;
-	}
-}
-
-void	ft_rra(t_ps *ps)
-{
-	int	tmp;
-	int	i;
-
-	if (ps->tab_a.size >= 2)
-	{
-		i = ps->tab_a.size - 1;
-		tmp = ps->tab_a.nums[ps->tab_a.size - 1];
-		while (i > 0)
-		{
-			ps->tab_a.nums[i] = ps->tab_a.nums[i - 1];
-			i--;
-		}
-		ps->tab_a.nums[i] = tmp;
-	}
-	printf("rra\n");
-	display_stacks(ps);
+	(void)ps;
 }

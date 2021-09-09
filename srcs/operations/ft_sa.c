@@ -6,7 +6,7 @@
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 22:38:08 by nathanlafar       #+#    #+#             */
-/*   Updated: 2021/08/24 23:19:31 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/09/09 23:59:29 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,5 @@ void	ft_sa(t_ps *ps)
 	ps->tab_a.nums[1] = ps->tab_a.nums[0];
 	ps->tab_a.nums[0] = tmp;
 	printf("sa\n");
+	display_stacks(ps);
 }

@@ -6,7 +6,7 @@
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 01:44:07 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/09/09 05:39:45 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/09/10 01:25:18 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,21 +98,25 @@ void	ft_prepare_stack_b(t_ps *ps)
 {
 	int	i;
 	int	min;
-	
-	if (ps->tab_b.size == 0)
-		return ;
+
 	i = 0;
 	min = -1;
+	if (ps->tab_b.size == 0)
+		return ;
 	while (i < ps->tab_b.size)
 	{
 		if (ps->tab_b.nums[i] < ps->tab_a.nums[0])
 		{
 			if (min == -1)
 				min = i;
-			else if (ps->tab_a.nums[0] - ps->tab_b.nums[min] >= ps->tab_a.nums[0] - ps->tab_b.nums[min])
+			if (ps->tab_a.nums[0] - ps->tab_b.nums[i] < ps->tab_a.nums[0] - ps->tab_b.nums[min])
 				min = i;
 		}
 		i++;
+	}
+	if (min == -1)
+	{
+		min = ft_find_min_pos(ps->tab_b.nums, ps->tab_b.size) + 1;
 	}
 	if (min <= (ps->tab_b.size / 2))
 		ft_rb_times(ps, min);
@@ -133,7 +137,7 @@ void	ft_sort_hundred(t_ps *ps, int chuncks)
 	ps->chunck.i = 0;
 	while (i < ps->nb_nums)
 	{
-		if (chunck_count == ps->chunck.size && ps->chunck.i < 5)
+		if (chunck_count == ps->chunck.size && ps->chunck.i < chuncks)
 		{
 			chunck_count = 0;
 			ps->chunck.i++;
@@ -158,5 +162,5 @@ void	ft_sort_hundred(t_ps *ps, int chuncks)
 		ft_pa(ps);
 		i++;
 	}
-	ft_print_stack(ps->tab_a.nums, ps->tab_a.size);
+	//ft_print_stack(ps->tab_a.nums, ps->tab_a.size);
 }
