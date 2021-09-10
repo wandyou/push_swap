@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sa.c                                            :+:      :+:    :+:   */
+/*   ft_find_from_top.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/24 22:38:08 by nathanlafar       #+#    #+#             */
-/*   Updated: 2021/09/10 14:23:30 by nathanlafar      ###   ########.fr       */
+/*   Created: 2021/09/10 16:10:10 by nathanlafar       #+#    #+#             */
+/*   Updated: 2021/09/10 16:10:22 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void	ft_sa(t_ps *ps)
+void	ft_find_from_top(t_ps *ps)
 {
-	int	tmp;
-
-	tmp = ps->tab_a.nums[1];
-	ps->tab_a.nums[1] = ps->tab_a.nums[0];
-	ps->tab_a.nums[0] = tmp;
-	printf("sa\n");
+	int	i;
+	
+	i = 0;
+	while (ps->tab_a.nums[i] < ps->chunck.min || ps->tab_a.nums[i] > ps->chunck.max)
+		i++;
+	ps->top.pos = i;
+	ps->top.val = ps->tab_a.nums[i];
+	ps->top.moves = i;
 }

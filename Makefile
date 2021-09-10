@@ -6,7 +6,7 @@
 #    By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/23 18:55:57 by nlafarge          #+#    #+#              #
-#    Updated: 2021/09/09 23:54:33 by nathanlafar      ###   ########.fr        #
+#    Updated: 2021/09/10 16:37:42 by nathanlafar      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,12 @@ UTILS = srcs/utils/ft_error.c \
 		srcs/utils/ft_find_range.c \
 		srcs/utils/ft_create_sorted_list.c \
 		srcs/utils/ft_copy_list.c \
-		srcs/utils/ft_display_stacks.c
+		srcs/utils/ft_display_stacks.c \
+		srcs/utils/ft_find_from_top.c \
+		srcs/utils/ft_find_from_bottom.c \
+		srcs/utils/ft_init_chunck_info.c \
+		srcs/utils/ft_find_pos_sorted.c \
+		srcs/utils/ft_prepare_stack_b.c
 
 OPERATIONS = srcs/operations/ft_sa.c \
 			srcs/operations/ft_ra.c \

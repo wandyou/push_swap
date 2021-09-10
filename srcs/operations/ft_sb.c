@@ -6,7 +6,7 @@
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 00:16:55 by nathanlafar       #+#    #+#             */
-/*   Updated: 2021/09/09 23:59:34 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/09/10 14:23:34 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,4 @@ void	ft_sb(t_ps *ps)
 	ps->tab_b.nums[1] = ps->tab_b.nums[0];
 	ps->tab_b.nums[0] = tmp;
 	printf("sb\n");
-	display_stacks(ps);
 }

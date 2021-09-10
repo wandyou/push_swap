@@ -6,7 +6,7 @@
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 23:44:44 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/09/09 23:54:09 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/09/10 16:38:36 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # define INT_MIN -2147483648
 # define INT_MAX 2147483647
 
-typedef	struct s_num_hold
+typedef struct s_num_hold
 {
 	int	pos;
 	int	val;
@@ -37,7 +37,7 @@ typedef struct s_chunck
 	int	i;
 	int	min;
 	int	max;
-	int size;
+	int	size;
 }	t_chunck;
 
 typedef struct s_ps
@@ -78,6 +78,14 @@ int			ft_find_range(int *tab, int size);
 void		ft_create_sorted_list(t_ps *ps);
 void		ft_copy_list(int *src, int *dst, int len);
 void		display_stacks(t_ps *ps);
+void		ft_find_from_top(t_ps *ps);
+void		ft_init_chunck_info(t_ps *ps, int chuncks);
+int			ft_find_pos_sorted(t_ps *ps, int value);
+void		ft_prepare_stack_b(t_ps *ps);
+void		ft_bring_num_top(t_ps *ps);
+int			ft_find_pos_b(t_ps *ps, int value);
+void		ft_find_from_bottom(t_ps *ps);
+void		ft_find_from_top(t_ps *ps);
 
 /*
 ** LIB

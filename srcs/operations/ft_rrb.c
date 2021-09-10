@@ -6,7 +6,7 @@
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 00:46:46 by nathanlafar       #+#    #+#             */
-/*   Updated: 2021/09/09 23:59:25 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/09/10 14:23:27 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,4 @@ void	ft_rrb(t_ps *ps)
 		ps->tab_b.nums[0] = tmp;
 	}
 	printf("rrb\n");
-	display_stacks(ps);
 }

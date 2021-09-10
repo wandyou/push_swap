@@ -6,7 +6,7 @@
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 00:47:55 by nathanlafar       #+#    #+#             */
-/*   Updated: 2021/09/09 23:59:02 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/09/10 14:22:52 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,4 @@ void	ft_pa(t_ps *ps)
 	ps->tab_b.nums = ps->tmp_b;
 	ps->tab_b.size--;
 	printf("pa\n");
-	display_stacks(ps);
 }
