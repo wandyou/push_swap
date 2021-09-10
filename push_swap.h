@@ -6,7 +6,7 @@
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 23:44:44 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/09/10 16:58:18 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/09/10 21:20:16 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ typedef struct s_ps
 ** MAIN
 */
 int			main(int argc, char **argv);
+void		main2(t_ps *ps);
 
 /*
 ** UTILS
