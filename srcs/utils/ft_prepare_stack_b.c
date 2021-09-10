@@ -6,7 +6,7 @@
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 16:33:10 by nathanlafar       #+#    #+#             */
-/*   Updated: 2021/09/10 16:33:22 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/09/10 16:42:13 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ void	ft_prepare_stack_b(t_ps *ps)
 		{
 			if (min == -1)
 				min = i;
-			if (ps->tab_a.nums[0] - ps->tab_b.nums[i] < ps->tab_a.nums[0] - ps->tab_b.nums[min])
+			if (ps->tab_a.nums[0] - ps->tab_b.nums[i]
+				< ps->tab_a.nums[0] - ps->tab_b.nums[min])
 				min = i;
 		}
 		i++;

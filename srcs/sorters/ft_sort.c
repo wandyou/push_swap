@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_from_bottom.c                              :+:      :+:    :+:   */
+/*   ft_sort.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/10 16:11:04 by nathanlafar       #+#    #+#             */
-/*   Updated: 2021/09/10 16:42:04 by nathanlafar      ###   ########.fr       */
+/*   Created: 2021/09/10 16:57:23 by nathanlafar       #+#    #+#             */
+/*   Updated: 2021/09/10 17:01:49 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void	ft_find_from_bottom(t_ps *ps)
+void	ft_sort(t_ps *ps)
 {
-	int	i;
-
-	i = ps->tab_a.size - 1;
-	while (ps->tab_a.nums[i] < ps->chunck.min
-		|| ps->tab_a.nums[i] > ps->chunck.max)
-		i--;
-	ps->bottom.pos = i;
-	ps->bottom.val = ps->tab_a.nums[i];
-	ps->bottom.moves = (ps->tab_a.size - i) + 1;
+	if (ps->nb_nums == 2)
+		ft_sa(ps);
+	else if (ps->nb_nums == 3)
+		ft_sort_three(ps);
+	else if (ps->nb_nums <= 5)
+		ft_sort_five(ps);
+	else if (ps->nb_nums <= 100)
+		ft_sort_hundred(ps, 5);
+	else
+		ft_sort_hundred(ps, 11);
+	ft_clean(ps);
 }

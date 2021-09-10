@@ -6,7 +6,7 @@
 #    By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/23 18:55:57 by nlafarge          #+#    #+#              #
-#    Updated: 2021/09/10 16:37:42 by nathanlafar      ###   ########.fr        #
+#    Updated: 2021/09/10 16:58:33 by nathanlafar      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,8 @@ UTILS = srcs/utils/ft_error.c \
 		srcs/utils/ft_find_from_bottom.c \
 		srcs/utils/ft_init_chunck_info.c \
 		srcs/utils/ft_find_pos_sorted.c \
-		srcs/utils/ft_prepare_stack_b.c
+		srcs/utils/ft_prepare_stack_b.c \
+		srcs/utils/ft_bring_num_top.c
 
 OPERATIONS = srcs/operations/ft_sa.c \
 			srcs/operations/ft_ra.c \
@@ -53,7 +54,8 @@ OPERATIONS = srcs/operations/ft_sa.c \
 			srcs/operations/ft_rrb.c \
 			srcs/operations/ft_pa.c
 
-SORTERS = srcs/sorters/ft_sort_three.c \
+SORTERS = srcs/sorters/ft_sort.c \
+			srcs/sorters/ft_sort_three.c \
 			srcs/sorters/ft_sort_five.c \
 			srcs/sorters/ft_sort_hundred.c
 

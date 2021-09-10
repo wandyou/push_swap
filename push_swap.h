@@ -6,7 +6,7 @@
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 23:44:44 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/09/10 16:38:36 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/09/10 16:58:18 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ typedef struct s_ps
 	t_chunck	chunck;
 	t_num_hold	top;
 	t_num_hold	bottom;
+	int			chunck_count;
+	int			pos_max;
 }	t_ps;
 
 /*
@@ -86,6 +88,7 @@ void		ft_bring_num_top(t_ps *ps);
 int			ft_find_pos_b(t_ps *ps, int value);
 void		ft_find_from_bottom(t_ps *ps);
 void		ft_find_from_top(t_ps *ps);
+void		ft_bring_num_top(t_ps *ps);
 
 /*
 ** LIB
@@ -119,6 +122,7 @@ void		ft_pa(t_ps *ps);
 /*
 ** SORTERS
 */
+void		ft_sort(t_ps *ps);
 void		ft_sort_three(t_ps *ps);
 void		ft_sort_five(t_ps *ps);
 void		ft_sort_hundred(t_ps *ps, int chuncks);
