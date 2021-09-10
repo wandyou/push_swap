@@ -13,7 +13,7 @@
 NAME = push_swap
 CC = clang
 RM = rm -rf
-CFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -g3
 
 LIB = srcs/lib/ft_atoi.c \
 	srcs/lib/ft_strlen.c

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
+/*   By: nlafarge <nlafarge@42.student.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 16:57:23 by nathanlafar       #+#    #+#             */
-/*   Updated: 2021/09/10 17:01:49 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/09/10 20:05:20 by nlafarge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,14 @@ void	ft_sort(t_ps *ps)
 	else if (ps->nb_nums <= 5)
 		ft_sort_five(ps);
 	else if (ps->nb_nums <= 100)
+	{
 		ft_sort_hundred(ps, 5);
+		free(ps->sorted);
+	}
 	else
+	{
 		ft_sort_hundred(ps, 11);
+		free(ps->sorted);
+	}
 	ft_clean(ps);
 }
