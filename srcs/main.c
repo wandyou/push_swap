@@ -6,7 +6,7 @@
 /*   By: nathanlafarge <nathanlafarge@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 23:44:55 by nlafarge          #+#    #+#             */
-/*   Updated: 2021/09/10 21:24:20 by nathanlafar      ###   ########.fr       */
+/*   Updated: 2021/09/16 01:04:43 by nathanlafar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,6 @@ int	main(int argc, char **argv)
 	ft_struct_init(&ps);
 	if (argc < 2)
 		ft_success(ft_clean(&ps), "Missing arguments ...");
-	if (argc == 2 && argv[1][0] == '\0')
-		ft_error(ft_clean(&ps), "Not a number");
-	else if (argc == 2)
-		ft_success(ft_clean(&ps), "Only one number, everthing's good !");
 	ps.nb_nums = argc - 1;
 	ps.tab_a.size = ps.nb_nums;
 	ft_stack_a_malloc(&ps);
